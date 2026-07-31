@@ -11,7 +11,7 @@ def task_a_linear_combination_of_vectors():
 
     vectors = []
     for i in range(k):
-        # Считываем вектор и сразу умножаем каждый его элемент на соответствующий скаляр
+        # Считываем вектор и сразу умножаем каждый его элемент на скаляр
         vector = list(map(float, input().split()))
         vectors.append([val * scalars[i] for val in vector])
 
@@ -21,13 +21,13 @@ def task_a_linear_combination_of_vectors():
         v_n = sum(vector[col] for vector in vectors)
         result.append(v_n)
 
-    print(' '.join(map(str, result)))
+    print(" ".join(map(str, result)))
 
 
 def task_b_orthogonality():
     """
     Задание B. Проверка ортогональности.
-    Определяет, ортогональны ли два вектора (их скалярное произведение равно 0).
+    Определяет, ортогональны ли два вектора.
     """
     n = int(input())
     u = list(map(int, input().split()))
@@ -36,9 +36,9 @@ def task_b_orthogonality():
     scalar_product = sum(u[i] * v[i] for i in range(n))
 
     if scalar_product == 0:
-        print('ORTHOGONAL')
+        print("ORTHOGONAL")
     else:
-        print('NON-ORTHOGONAL')
+        print("NON-ORTHOGONAL")
 
 
 def task_c_cramers_rule():
@@ -60,7 +60,7 @@ def task_c_cramers_rule():
     if D != 0 and D1 % D == 0 and D2 % D == 0:
         print(f"{D1 // D} {D2 // D}")
     else:
-        print('NO_SOLUTION')
+        print("NO_SOLUTION")
 
 
 def task_d_angle_between_vectors():
@@ -81,7 +81,7 @@ def task_d_angle_between_vectors():
 
     # Вычисляем косинус угла
     cos_theta = dot_prod / (norm_v1 * norm_v2)
-    # Защита от погрешностей вычислений float (чтобы значение не вышло за [-1; 1])
+    # Защита от погрешностей вычислений float)
     cos_theta = max(min(cos_theta, 1.0), -1.0)
 
     result = int(math.degrees(math.acos(cos_theta)))
@@ -91,7 +91,7 @@ def task_d_angle_between_vectors():
 def task_e_linear_dependence():
     """
     Задание E. Проверка линейной зависимости векторов.
-    Определяет линейную зависимость путем приведения матрицы векторов 
+    Определяет линейную зависимость путем приведения матрицы векторов
     к ступенчатому виду (Метод Гаусса) без использования дробей.
     """
     m, n = map(int, input().split())
@@ -100,9 +100,9 @@ def task_e_linear_dependence():
         matrix.append(list(map(int, input().split())))
 
     # Быстрая проверка: если векторов больше, чем размерность пространства,
-    # они гарантированно зависимы.
+    # они гарантированно зависимы
     if m > n:
-        print('LINEARLY_DEPENDENT')
+        print("LINEARLY_DEPENDENT")
         return
 
     row = 0
@@ -131,8 +131,7 @@ def task_e_linear_dependence():
         row += 1
         col += 1
 
-    # Если количество ненулевых ступенек равно количеству векторов - они независимы
     if row == m:
-        print('LINEARLY_INDEPENDENT')
+        print("LINEARLY_INDEPENDENT")
     else:
-        print('LINEARLY_DEPENDENT')
+        print("LINEARLY_DEPENDENT")
