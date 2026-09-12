@@ -3,7 +3,7 @@
 
 ![Python](https://img.shields.io/badge/python-3.11+-ffd166?style=for-the-badge&logo=python&logoColor=black)
 ![ML](https://img.shields.io/badge/focus-Machine_Learning-f89b29?style=for-the-badge&logo=gitbook&logoColor=white)
-![Status](https://img.shields.io/badge/status-Day_1_/_Onboarding-ff0f7b?style=for-the-badge)
+![Status](https://img.shields.io/badge/status-Phase_3_/_Classic_ML-ff0f7b?style=for-the-badge)
 
 ## Мои цели на год
 *   **Фундамент:** Глубокое понимание математики и алгоритмов для ML.
@@ -14,8 +14,8 @@
 ## Дорожная карта (Progress)
 - [x] **P0: Онбординг** (Дни 1-2) - Настройка окружения, Гитхаб, цели.
 - [x] **P1: Python & Математика** (Дни 3-14)
-- [x] **P2: Алгоритмы и SQL** (Дни 15-30)
-- [ ] **P3: Классический Machine Learning** (Дни 31-44)
+- [x] **P2: Алгоритмы и структуры данных** (Дни 15-30)
+- [ ] **P3: Классический Machine Learning** (Дни 31-44, начато: Titanic EDA)
 - [ ] ... остальные фазы будут добавляться по мере прохождения.
 
 ## Стек технологий
@@ -25,6 +25,8 @@
 
 ## Структура репозитория
 *   `phase-01-fundamentals/`: Заметки по математике и основы Python.
+*   `phase-02-algorithms/`: Задачи по алгоритмам и структурам данных.
+*   `phase-03-classic-ml/`: Классический ML, первые EDA.
 *   `notes/`: Конспекты лекций и полезные ссылки.
 *   `projects/`: Мои ML-проекты с описанием.
 
